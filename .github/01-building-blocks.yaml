@@ -1,0 +1,22 @@
+name: 01 - Building Blocks
+on:
+  pull_request:
+    types:
+      - push
+      - workflow_dispatch
+jobs:
+  
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, World!"
+
+  say-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "I will fail"
+        name: "Failed step"
+
+      - run: echo "Goodbye!"
+        name: "Say goodbye"
