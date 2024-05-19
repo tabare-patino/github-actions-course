@@ -1,9 +1,7 @@
 name: 01 - Building Blocks
 on:
-  pull_request:
-    types:
-      - push
-      - workflow_dispatch
+  - push
+  - workflow_dispatch
 jobs:
   
   echo-hello:
